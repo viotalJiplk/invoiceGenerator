@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktura - informace</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <h1>Generátor faktur</h1>
+    <div>
+        <label for="pocetOsob">Počet osob</label>
+        <input type="number" id="pocetOsob"/>
+        <label for="pocetDni">Počet dní</label>
+        <input type="number" id="pocetDni"/>
+        <label for="hotovost">Hotově</label>
+        <input type="checkbox" id="hotovost"/>
+        <h3>Data:</h3>
+        <label for="issueDate">Datum vystavení</label>
+        <input type="date" id="issueDate"/>
+        <label for="taxableSupplyDate">Zdanitelné plnění</label>
+        <input type="date" id="taxableSupplyDate"/>
+        <label for="dueDate">Datum splatnosti</label>
+        <input type="date" id="dueDate"/>
+        <h3>Organizace:</h3>
+        <label for="orgName">Jméno</label>
+        <input id="orgName"/>
+        <label for="IC">IČ</label>
+        <input id="IC"/>
+        <label for="DIC">DIČ</label>
+        <input id="DIC"/>
+        <label for="houseNumber">Orientační Číslo</label>
+        <input id="houseNumber"/>
+        <label for="street">Ulice</label>
+        <input id="street"/>
+        <label for="city">Město</label>
+        <input id="city"/>
+        <label for="PSC">PSČ</label>
+        <input id="PSC"/>
+        <button id="submit">Vytvoř fakturu</button>
+    </div>
+</body>
+</html>

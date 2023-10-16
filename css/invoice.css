@@ -1,0 +1,133 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+}
+
+#header{
+    display: grid;
+    grid-template-areas: 
+    "dodavatel odberatel"
+    "payment plneni";
+}
+
+.name{
+    font-weight: bold;
+}
+
+#header > div{
+    border: 0.1rem solid black;
+    padding: 0.5rem;
+}
+
+#header > div p, #header table td{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+#dodavatel{
+    grid-area: dodavatel;
+}
+
+#odberatel{
+    grid-area: odberatel;
+}
+
+#payment{
+    grid-area: payment;
+}
+
+#plneni{
+    grid-area: plneni;
+}
+
+#zbozi > table{
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+#zbozi > table thead tr{
+    border-bottom: 0.1rem solid black;
+}
+
+#zbozi > table thead tr th{
+    font-weight: normal;
+    text-align: left;
+}
+
+#zbozi > table tbody tr{
+    border-bottom: 0.1rem dashed black;
+}
+
+.spacer{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#final{
+    display: flex;
+}
+
+#stampHolder{
+    border: 0.1rem solid black;
+    width: 100mm;
+    height: 30mm;
+}
+
+#fianlPriceHolder p{
+    font-size: large;
+    font-weight: bold;
+}
+
+#print{
+    position: sticky;
+    display: flex;
+    bottom: 1rem;
+    width: 100%;
+}
+
+#print img{
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(77, 180, 180);
+    border-radius: 5rem;
+    height: 100%;
+}
+
+@media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        /*margin: 30mm 45mm 30mm 45mm;*/
+    }
+    #print{
+        display: none;
+    }
+}
+@media screen {
+    html{
+        background-color: #2a2a2e;
+        display: flex;
+        justify-content: center;
+    }
+    body{
+        background-color: white;
+        width: 21cm;
+        min-height: 29.7cm;
+        height: auto;
+        background-position-x: 30mm;
+        padding: 30mm 45mm 30mm 45mm;
+    }
+}
+
+@media screen and (max-width: 21cm) {
+    body{
+        padding: 1rem;
+        width: auto;
+    }
+}

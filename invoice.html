@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktura</title>
+    <link rel="stylesheet" href="css/invoice.css"/>
+    <script src="js/invoice.js" defer></script>
+</head>
+<body>
+    <h1>Faktura číslo: <span id="number"></span></h1>
+    <div id="header">
+        <div id="dodavatel">
+            <h2>Dodavatel:</h2>
+            <p class="name"></p>
+            <p class="address"></p>
+            <p class="mestoPSC"></p>
+            <p>IČ: <span class="ic"></span></p>
+            <p>DIČ: <span class="dic"></span></p>
+        </div>
+        <div id="odberatel">
+            <h2>Odběratel:</h2>
+            <p class="name"></p>
+            <p class="address"></p>
+            <p class="mestoPSC"></p>
+            <p>IČ: <span class="ic"></span></p>
+            <p>DIČ: <span class="dic"></span></p>
+        </div>
+        <div id="payment">
+            <h2>Platební údaje:</h2>
+            <table>
+                <tr><td>Způsob úhrady:</td><td class="type"></td></tr>
+                <tr><td>Číslo účtu:</td><td class="accountNumber"></td></tr>
+                <tr><td>Variabilní symbol:</td><td class="variableSymbol"></td></tr>
+                <tr><td>Konstantní symbol:&nbsp;</td><td class="constantSymbol"></td></tr>
+                <tr><td><p>Banka:</p><p>&nbsp;</p></td><td class="bankInfo">
+                    <p class="name"></p>
+                    <p><span class="address"></span></p>
+                </td></tr>
+                <tr><td>IBAN:</td><td class="iban"></td></tr>
+                <tr><td>SWIFT:</td><td class="swift"></td></tr>
+            </table>
+        </div>
+        <div id="plneni">
+            <table>
+                <tr><td>Datum vystavení: </td><td class="issueDate"></td></tr>
+                <tr><td>Zdanitelné plnění: </td><td class="taxableSupplyDate"></td></tr>
+                <tr><td>Datum splatnosti: </td><td class="dueDate"></td></tr>
+            </table>
+        </div>
+    </div>
+    <div id="zbozi">
+        <table>
+            <thead>
+                <tr><th>Název</th><th>Množství</th><th>Cena za jednotku</th><th>Celkem</th></tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="spacer"></div>
+    <div id="final">
+        <div id="fianlPriceHolder">
+            <p>Celkem: <span id="fianlPrice"></span></p>
+        </div>
+        <div class="spacer"></div>
+        <div>
+            <p>Podpis a razítko:</p>
+            <div id="stampHolder"></div>
+        </div>
+    </div>
+    <div id="print">
+        <div class="spacer"></div><img onclick="window.print()" src="printer.svg"/>
+    </div>
+</body>
+</html>
